@@ -1,0 +1,132 @@
+export const PRODUCTS = Object.freeze([
+  {
+    "id": "bac-water",
+    "slug": "bac-water",
+    "name": "BAC Water",
+    "category": "Research Supply",
+    "regularPrice": 30.0,
+    "salePrice": 19.0,
+    "startingPrice": null,
+    "featured": false
+  },
+  {
+    "id": "bpc-157",
+    "slug": "bpc-157",
+    "name": "BPC-157",
+    "category": "Peptide Compounds",
+    "regularPrice": null,
+    "salePrice": null,
+    "startingPrice": 33.0,
+    "featured": true
+  },
+  {
+    "id": "bpc-157-tb-500-10mg",
+    "slug": "bpc-157-tb-500-10mg",
+    "name": "BPC-157 + TB-500 - 10MG",
+    "category": "Peptide Compounds",
+    "regularPrice": 65.0,
+    "salePrice": 54.0,
+    "startingPrice": null,
+    "featured": false
+  },
+  {
+    "id": "cjc-1295-no-dac-ipamorelin-10mg",
+    "slug": "cjc-1295-no-dac-ipamorelin-10mg",
+    "name": "CJC-1295 (No DAC) + Ipamorelin - 10 MG (Blend)",
+    "category": "Peptide Compounds",
+    "regularPrice": 72.0,
+    "salePrice": 60.0,
+    "startingPrice": null,
+    "featured": false
+  },
+  {
+    "id": "ghk-cu",
+    "slug": "ghk-cu",
+    "name": "GHK-Cu",
+    "category": "Peptide Compounds",
+    "regularPrice": null,
+    "salePrice": null,
+    "startingPrice": 44.0,
+    "featured": true
+  },
+  {
+    "id": "glow",
+    "slug": "glow",
+    "name": "GLOW",
+    "category": "Peptide Compounds",
+    "regularPrice": 95.0,
+    "salePrice": 85.0,
+    "startingPrice": null,
+    "featured": true
+  },
+  {
+    "id": "klow",
+    "slug": "klow",
+    "name": "KLOW",
+    "category": "Peptide Compounds",
+    "regularPrice": 110.0,
+    "salePrice": 100.0,
+    "startingPrice": null,
+    "featured": true
+  },
+  {
+    "id": "melanotan",
+    "slug": "melanotan",
+    "name": "MELANOTAN",
+    "category": "Peptide Compounds",
+    "regularPrice": 45.0,
+    "salePrice": 38.0,
+    "startingPrice": null,
+    "featured": false
+  },
+  {
+    "id": "mots-c",
+    "slug": "mots-c",
+    "name": "MOTS-C",
+    "category": "Peptide Compounds",
+    "regularPrice": 55.0,
+    "salePrice": 43.0,
+    "startingPrice": null,
+    "featured": false
+  },
+  {
+    "id": "nad-plus",
+    "slug": "nad-plus",
+    "name": "NAD+",
+    "category": "Peptide Compounds",
+    "regularPrice": null,
+    "salePrice": null,
+    "startingPrice": 60.0,
+    "featured": false
+  },
+  {
+    "id": "retatrutide",
+    "slug": "retatrutide",
+    "name": "RETATRUTIDE",
+    "category": "Peptide Compounds",
+    "regularPrice": null,
+    "salePrice": null,
+    "startingPrice": 85.0,
+    "featured": false
+  },
+  {
+    "id": "tb-500",
+    "slug": "tb-500",
+    "name": "TB-500",
+    "category": "Peptide Compounds",
+    "regularPrice": null,
+    "salePrice": null,
+    "startingPrice": 39.0,
+    "featured": false
+  },
+  {
+    "id": "tesamorelin",
+    "slug": "tesamorelin",
+    "name": "TESAMORELIN",
+    "category": "Peptide Compounds",
+    "regularPrice": 85.0,
+    "salePrice": 74.0,
+    "startingPrice": null,
+    "featured": false
+  }
+]);
