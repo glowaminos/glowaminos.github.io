@@ -1,10 +1,16 @@
 export const SITE_CONFIG = Object.freeze({
   brandName: "Glow Aminos",
+  legalName: "",
   siteUrl: "",
   supportEmail: "",
+  abuseEmail: "",
+  billingDescriptor: "",
   currency: "USD",
-  checkoutEndpoint: "/api/create-checkout",
+  freeShippingThreshold: null,
+  shippingCutoff: "",
+  checkoutEndpoint: "",
   contactEndpoint: "",
   newsletterEndpoint: "",
-  researchNotice: "For laboratory research use only · Not for human or veterinary use · 21+"
+  social: {instagram: "", x: ""},
+  researchNotice: "RESEARCH USE ONLY  /  NOT FOR HUMAN OR VETERINARY USE  /  21+"
 });

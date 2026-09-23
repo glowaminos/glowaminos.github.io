@@ -1,0 +1,14 @@
+[
+  {
+    "id": "single",
+    "label": "Single peptides"
+  },
+  {
+    "id": "blend",
+    "label": "Research blends"
+  },
+  {
+    "id": "supply",
+    "label": "Lab supplies"
+  }
+]

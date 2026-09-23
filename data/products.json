@@ -8,7 +8,25 @@
     "salePrice": 19.0,
     "startingPrice": null,
     "featured": false,
-    "image": "assets/images/products/bac-water.avif"
+    "image": "assets/images/products/bac-water.avif",
+    "type": "supply",
+    "priceFrom": false,
+    "price": 19.0,
+    "compareAt": 30.0,
+    "variants": [],
+    "purity": null,
+    "casNumber": null,
+    "molecularFormula": null,
+    "molecularWeight": null,
+    "sequence": null,
+    "form": null,
+    "storage": null,
+    "coaUrl": null,
+    "lot": null,
+    "inStock": null,
+    "tags": [
+      "supply"
+    ]
   },
   {
     "id": "bpc-157",
@@ -19,7 +37,25 @@
     "salePrice": null,
     "startingPrice": 33.0,
     "featured": true,
-    "image": "assets/images/products/bpc-157.avif"
+    "image": "assets/images/products/bpc-157.avif",
+    "type": "single",
+    "priceFrom": true,
+    "price": 33.0,
+    "compareAt": null,
+    "variants": [],
+    "purity": null,
+    "casNumber": null,
+    "molecularFormula": null,
+    "molecularWeight": null,
+    "sequence": null,
+    "form": null,
+    "storage": null,
+    "coaUrl": null,
+    "lot": null,
+    "inStock": null,
+    "tags": [
+      "single"
+    ]
   },
   {
     "id": "bpc-157-tb-500-10mg",
@@ -30,7 +66,25 @@
     "salePrice": 54.0,
     "startingPrice": null,
     "featured": false,
-    "image": "assets/images/products/bpc-157-tb-500-10mg.avif"
+    "image": "assets/images/products/bpc-157-tb-500-10mg.avif",
+    "type": "blend",
+    "priceFrom": false,
+    "price": 54.0,
+    "compareAt": 65.0,
+    "variants": [],
+    "purity": null,
+    "casNumber": null,
+    "molecularFormula": null,
+    "molecularWeight": null,
+    "sequence": null,
+    "form": null,
+    "storage": null,
+    "coaUrl": null,
+    "lot": null,
+    "inStock": null,
+    "tags": [
+      "blend"
+    ]
   },
   {
     "id": "cjc-1295-no-dac-ipamorelin-10mg",
@@ -41,7 +95,25 @@
     "salePrice": 60.0,
     "startingPrice": null,
     "featured": false,
-    "image": "assets/images/products/cjc-1295-no-dac-ipamorelin-10mg.avif"
+    "image": "assets/images/products/cjc-1295-no-dac-ipamorelin-10mg.avif",
+    "type": "blend",
+    "priceFrom": false,
+    "price": 60.0,
+    "compareAt": 72.0,
+    "variants": [],
+    "purity": null,
+    "casNumber": null,
+    "molecularFormula": null,
+    "molecularWeight": null,
+    "sequence": null,
+    "form": null,
+    "storage": null,
+    "coaUrl": null,
+    "lot": null,
+    "inStock": null,
+    "tags": [
+      "blend"
+    ]
   },
   {
     "id": "ghk-cu",
@@ -52,7 +124,25 @@
     "salePrice": null,
     "startingPrice": 44.0,
     "featured": true,
-    "image": "assets/images/products/ghk-cu.avif"
+    "image": "assets/images/products/ghk-cu.avif",
+    "type": "single",
+    "priceFrom": true,
+    "price": 44.0,
+    "compareAt": null,
+    "variants": [],
+    "purity": null,
+    "casNumber": null,
+    "molecularFormula": null,
+    "molecularWeight": null,
+    "sequence": null,
+    "form": null,
+    "storage": null,
+    "coaUrl": null,
+    "lot": null,
+    "inStock": null,
+    "tags": [
+      "single"
+    ]
   },
   {
     "id": "glow",
@@ -63,7 +153,25 @@
     "salePrice": 85.0,
     "startingPrice": null,
     "featured": true,
-    "image": "assets/images/products/glow.avif"
+    "image": "assets/images/products/glow.avif",
+    "type": "blend",
+    "priceFrom": false,
+    "price": 85.0,
+    "compareAt": 95.0,
+    "variants": [],
+    "purity": null,
+    "casNumber": null,
+    "molecularFormula": null,
+    "molecularWeight": null,
+    "sequence": null,
+    "form": null,
+    "storage": null,
+    "coaUrl": null,
+    "lot": null,
+    "inStock": null,
+    "tags": [
+      "blend"
+    ]
   },
   {
     "id": "klow",
@@ -74,7 +182,25 @@
     "salePrice": 100.0,
     "startingPrice": null,
     "featured": true,
-    "image": "assets/images/products/klow.avif"
+    "image": "assets/images/products/klow.avif",
+    "type": "blend",
+    "priceFrom": false,
+    "price": 100.0,
+    "compareAt": 110.0,
+    "variants": [],
+    "purity": null,
+    "casNumber": null,
+    "molecularFormula": null,
+    "molecularWeight": null,
+    "sequence": null,
+    "form": null,
+    "storage": null,
+    "coaUrl": null,
+    "lot": null,
+    "inStock": null,
+    "tags": [
+      "blend"
+    ]
   },
   {
     "id": "melanotan",
@@ -85,7 +211,25 @@
     "salePrice": 38.0,
     "startingPrice": null,
     "featured": false,
-    "image": "assets/images/products/melanotan.avif"
+    "image": "assets/images/products/melanotan.avif",
+    "type": "single",
+    "priceFrom": false,
+    "price": 38.0,
+    "compareAt": 45.0,
+    "variants": [],
+    "purity": null,
+    "casNumber": null,
+    "molecularFormula": null,
+    "molecularWeight": null,
+    "sequence": null,
+    "form": null,
+    "storage": null,
+    "coaUrl": null,
+    "lot": null,
+    "inStock": null,
+    "tags": [
+      "single"
+    ]
   },
   {
     "id": "mots-c",
@@ -96,7 +240,25 @@
     "salePrice": 43.0,
     "startingPrice": null,
     "featured": false,
-    "image": "assets/images/products/mots-c.avif"
+    "image": "assets/images/products/mots-c.avif",
+    "type": "single",
+    "priceFrom": false,
+    "price": 43.0,
+    "compareAt": 55.0,
+    "variants": [],
+    "purity": null,
+    "casNumber": null,
+    "molecularFormula": null,
+    "molecularWeight": null,
+    "sequence": null,
+    "form": null,
+    "storage": null,
+    "coaUrl": null,
+    "lot": null,
+    "inStock": null,
+    "tags": [
+      "single"
+    ]
   },
   {
     "id": "nad-plus",
@@ -107,7 +269,25 @@
     "salePrice": null,
     "startingPrice": 60.0,
     "featured": false,
-    "image": "assets/images/products/nad-plus.avif"
+    "image": "assets/images/products/nad-plus.avif",
+    "type": "single",
+    "priceFrom": true,
+    "price": 60.0,
+    "compareAt": null,
+    "variants": [],
+    "purity": null,
+    "casNumber": null,
+    "molecularFormula": null,
+    "molecularWeight": null,
+    "sequence": null,
+    "form": null,
+    "storage": null,
+    "coaUrl": null,
+    "lot": null,
+    "inStock": null,
+    "tags": [
+      "single"
+    ]
   },
   {
     "id": "retatrutide",
@@ -118,7 +298,25 @@
     "salePrice": null,
     "startingPrice": 85.0,
     "featured": false,
-    "image": "assets/images/products/retatrutide.avif"
+    "image": "assets/images/products/retatrutide.avif",
+    "type": "single",
+    "priceFrom": true,
+    "price": 85.0,
+    "compareAt": null,
+    "variants": [],
+    "purity": null,
+    "casNumber": null,
+    "molecularFormula": null,
+    "molecularWeight": null,
+    "sequence": null,
+    "form": null,
+    "storage": null,
+    "coaUrl": null,
+    "lot": null,
+    "inStock": null,
+    "tags": [
+      "single"
+    ]
   },
   {
     "id": "tb-500",
@@ -129,7 +327,25 @@
     "salePrice": null,
     "startingPrice": 39.0,
     "featured": false,
-    "image": "assets/images/products/tb-500.avif"
+    "image": "assets/images/products/tb-500.avif",
+    "type": "single",
+    "priceFrom": true,
+    "price": 39.0,
+    "compareAt": null,
+    "variants": [],
+    "purity": null,
+    "casNumber": null,
+    "molecularFormula": null,
+    "molecularWeight": null,
+    "sequence": null,
+    "form": null,
+    "storage": null,
+    "coaUrl": null,
+    "lot": null,
+    "inStock": null,
+    "tags": [
+      "single"
+    ]
   },
   {
     "id": "tesamorelin",
@@ -140,6 +356,24 @@
     "salePrice": 74.0,
     "startingPrice": null,
     "featured": false,
-    "image": "assets/images/products/tesamorelin.avif"
+    "image": "assets/images/products/tesamorelin.avif",
+    "type": "single",
+    "priceFrom": false,
+    "price": 74.0,
+    "compareAt": 85.0,
+    "variants": [],
+    "purity": null,
+    "casNumber": null,
+    "molecularFormula": null,
+    "molecularWeight": null,
+    "sequence": null,
+    "form": null,
+    "storage": null,
+    "coaUrl": null,
+    "lot": null,
+    "inStock": null,
+    "tags": [
+      "single"
+    ]
   }
 ]
