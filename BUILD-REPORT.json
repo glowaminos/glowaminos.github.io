@@ -1,5 +1,9 @@
 {
   "html_pages": 28,
   "products": 13,
-  "integrity_errors": []
+  "real_product_images": 13,
+  "image_replacement": "complete",
+  "placeholder_product_visuals_remaining": 0,
+  "js_syntax_check": "pass",
+  "local_reference_check": "pass"
 }
