@@ -1,5 +1,5 @@
 export const SITE_CONFIG = Object.freeze({
-  brandName: "Research Catalog",
+  brandName: "Glow Aminos",
   siteUrl: "",
   supportEmail: "",
   currency: "USD",
