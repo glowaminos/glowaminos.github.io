@@ -7,7 +7,8 @@
     "regularPrice": 30.0,
     "salePrice": 19.0,
     "startingPrice": null,
-    "featured": false
+    "featured": false,
+    "image": "assets/images/products/bac-water.avif"
   },
   {
     "id": "bpc-157",
@@ -17,7 +18,8 @@
     "regularPrice": null,
     "salePrice": null,
     "startingPrice": 33.0,
-    "featured": true
+    "featured": true,
+    "image": "assets/images/products/bpc-157.avif"
   },
   {
     "id": "bpc-157-tb-500-10mg",
@@ -27,7 +29,8 @@
     "regularPrice": 65.0,
     "salePrice": 54.0,
     "startingPrice": null,
-    "featured": false
+    "featured": false,
+    "image": "assets/images/products/bpc-157-tb-500-10mg.avif"
   },
   {
     "id": "cjc-1295-no-dac-ipamorelin-10mg",
@@ -37,7 +40,8 @@
     "regularPrice": 72.0,
     "salePrice": 60.0,
     "startingPrice": null,
-    "featured": false
+    "featured": false,
+    "image": "assets/images/products/cjc-1295-no-dac-ipamorelin-10mg.avif"
   },
   {
     "id": "ghk-cu",
@@ -47,7 +51,8 @@
     "regularPrice": null,
     "salePrice": null,
     "startingPrice": 44.0,
-    "featured": true
+    "featured": true,
+    "image": "assets/images/products/ghk-cu.avif"
   },
   {
     "id": "glow",
@@ -57,7 +62,8 @@
     "regularPrice": 95.0,
     "salePrice": 85.0,
     "startingPrice": null,
-    "featured": true
+    "featured": true,
+    "image": "assets/images/products/glow.avif"
   },
   {
     "id": "klow",
@@ -67,7 +73,8 @@
     "regularPrice": 110.0,
     "salePrice": 100.0,
     "startingPrice": null,
-    "featured": true
+    "featured": true,
+    "image": "assets/images/products/klow.avif"
   },
   {
     "id": "melanotan",
@@ -77,7 +84,8 @@
     "regularPrice": 45.0,
     "salePrice": 38.0,
     "startingPrice": null,
-    "featured": false
+    "featured": false,
+    "image": "assets/images/products/melanotan.avif"
   },
   {
     "id": "mots-c",
@@ -87,7 +95,8 @@
     "regularPrice": 55.0,
     "salePrice": 43.0,
     "startingPrice": null,
-    "featured": false
+    "featured": false,
+    "image": "assets/images/products/mots-c.avif"
   },
   {
     "id": "nad-plus",
@@ -97,7 +106,8 @@
     "regularPrice": null,
     "salePrice": null,
     "startingPrice": 60.0,
-    "featured": false
+    "featured": false,
+    "image": "assets/images/products/nad-plus.avif"
   },
   {
     "id": "retatrutide",
@@ -107,7 +117,8 @@
     "regularPrice": null,
     "salePrice": null,
     "startingPrice": 85.0,
-    "featured": false
+    "featured": false,
+    "image": "assets/images/products/retatrutide.avif"
   },
   {
     "id": "tb-500",
@@ -117,7 +128,8 @@
     "regularPrice": null,
     "salePrice": null,
     "startingPrice": 39.0,
-    "featured": false
+    "featured": false,
+    "image": "assets/images/products/tb-500.avif"
   },
   {
     "id": "tesamorelin",
@@ -127,6 +139,7 @@
     "regularPrice": 85.0,
     "salePrice": 74.0,
     "startingPrice": null,
-    "featured": false
+    "featured": false,
+    "image": "assets/images/products/tesamorelin.avif"
   }
 ]

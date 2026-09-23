@@ -29,3 +29,10 @@ Open `http://localhost:8080/`.
 6. Connect a real server-side payment provider in `api/create-checkout.js`.
 7. Configure contact/newsletter endpoints.
 8. Populate `sitemap.xml` after the production domain is known.
+
+
+## Product image update
+- 13 owner-supplied AVIF product images are stored in `assets/images/products/`.
+- Every catalog product now has a matching real product image.
+- Product cards, featured products, product detail pages, cart thumbnails and the homepage hero use these supplied assets.
+- Original random/hash filenames were replaced with semantic product filenames.
