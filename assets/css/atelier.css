@@ -41,3 +41,4 @@ html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-fam
 .product-zoom-help{margin:0;padding:11px 16px;color:var(--muted);font-size:.72rem;text-align:center}
 @media(max-width:700px){.product-zoom-modal{padding:0}.product-zoom-dialog{height:100%}.product-zoom-toolbar{padding:10px}.product-zoom-help{font-size:.65rem;padding:9px}}
 @media(prefers-reduced-motion:reduce){.product-zoom-trigger .detail-image{transition:none}}
+.starting-price-note{display:block;margin-top:5px;font-size:.7rem;line-height:1.4;color:var(--muted)}

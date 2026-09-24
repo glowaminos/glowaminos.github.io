@@ -18,7 +18,7 @@ Open `http://localhost:8080`. Do not use `file://`; the COA and testing data are
 
 `data/products.json` is the single catalog source. The browser loads it through `assets/js/products.js`; the checkout validation skeleton reads the same JSON on the server. Set its type to `single`, `blend`, or `supply`, provide an owner-authorized image, then add a matching product page under `products/`. Category counts derive from the product records.
 
-Starting prices are display-only until exact variants and size-specific prices are confirmed. Products with `startingPrice` cannot be added to the cart. Only exact-price products are accepted by the server-side validation skeleton in `api/create-checkout.js`. The checkout endpoint is intentionally empty in `assets/js/config.js` so no payment or order success can be simulated.
+Products with `startingPrice` can be added to the cart with an estimated subtotal, but checkout still requires confirmed variants and size-specific prices. The server-side validation skeleton in `api/create-checkout.js` accepts only exact-price products. The checkout endpoint is intentionally empty in `assets/js/config.js` so no payment or order success can be simulated.
 
 ## Certificates and testing
 
