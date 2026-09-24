@@ -1,0 +1,4 @@
+import {SITE_CONFIG} from './config.js';
+const isHome=location.pathname==='/'||location.pathname.endsWith('/index.html');
+const data=isHome?{'@context':'https://schema.org','@type':'Organization',name:SITE_CONFIG.brandName,logo:new URL('assets/images/glow-aminos-logo.webp',location.href).href}:location.pathname.endsWith('/faq.html')?{'@context':'https://schema.org','@type':'FAQPage',mainEntity:[...document.querySelectorAll('main details')].map(d=>({'@type':'Question',name:d.querySelector('summary')?.textContent.trim(),acceptedAnswer:{'@type':'Answer',text:d.querySelector('p')?.textContent.trim()}}))}:null;
+if(data){if(isHome&&SITE_CONFIG.siteUrl)data.url=SITE_CONFIG.siteUrl;const script=document.createElement('script');script.type='application/ld+json';script.textContent=JSON.stringify(data);document.head.append(script)}

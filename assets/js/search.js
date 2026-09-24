@@ -1,0 +1,14 @@
+import {PRODUCTS} from './products.js';
+import {money,getPrice,prefix} from './components.js';
+export function setupSearch(){
+ const modal=document.querySelector('[data-search-modal]');if(!modal)return;
+ const input=modal.querySelector('[data-global-search]'),results=modal.querySelector('[data-search-results]');let previous,selected=0;
+ const score=(name,term)=>{name=name.toLowerCase();if(name.includes(term))return 2;let position=0;for(const letter of term){position=name.indexOf(letter,position);if(position===-1)return 0;position++}return 1};
+ const highlight=()=>[...results.querySelectorAll('.search-result')].forEach((a,i)=>a.classList.toggle('selected',i===selected));
+ const render=()=>{const term=input.value.trim().toLowerCase(),matches=term?PRODUCTS.map(p=>({p,score:score(p.name+' '+p.type,term)})).filter(x=>x.score).sort((a,b)=>b.score-a.score).slice(0,8).map(x=>x.p):PRODUCTS.filter(p=>p.featured).slice(0,4);results.innerHTML=matches.length?matches.map(p=>`<a class="search-result" href="${prefix()}products/${p.slug}.html"><img src="${prefix()}${p.image}" alt="" width="48" height="48"><span>${p.name}<small>${p.category}</small></span><strong>${getPrice(p)==null?'Enquire':money(getPrice(p))}</strong></a>`).join(''):'<p class="search-empty">No matching products.</p>';selected=0;highlight()};
+ const open=()=>{if(document.querySelector('.age-gate'))return;previous=document.activeElement;modal.classList.remove('hidden');document.body.classList.add('locked');input.value='';render();input.focus()};
+ const close=()=>{modal.classList.add('hidden');document.body.classList.remove('locked');previous?.focus?.()};
+ document.querySelector('[data-search-open]')?.addEventListener('click',open);modal.querySelector('[data-search-close]').onclick=close;modal.addEventListener('click',e=>{if(e.target===modal)close()});input.addEventListener('input',render);
+ document.addEventListener('keydown',e=>{if((e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName))||((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k')){e.preventDefault();if(modal.classList.contains('hidden'))open();else close()}else if(e.key==='Escape'&&!modal.classList.contains('hidden'))close();else if(!modal.classList.contains('hidden')&&['ArrowDown','ArrowUp'].includes(e.key)){e.preventDefault();const len=results.querySelectorAll('.search-result').length;if(len){selected=(selected+(e.key==='ArrowDown'?1:-1)+len)%len;highlight()}}else if(!modal.classList.contains('hidden')&&e.key==='Enter'){const current=results.querySelectorAll('.search-result')[selected];if(current){e.preventDefault();current.click()}}});
+ modal.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const focus=[...modal.querySelectorAll('input,button,a')],first=focus[0],last=focus.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}});
+}
