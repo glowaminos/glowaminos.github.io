@@ -37,3 +37,7 @@ Upload the repository root to GitHub Pages or another static host. Configure a p
 ## Product details
 
 Every item has an original overview and a compound-level specification summary in `data/products.json`; product pages show a COA availability state and links to the site's shipping and returns information. The source trail and items that require merchant confirmation are in `docs/product-content-sources.md`. Compound identity information is distinct from a Glow Aminos lot's measured purity or a verified formulation. Do not transfer another seller's certificates or commercial policies into this catalog.
+
+## Branded search and crawlable catalog
+
+The selected public URL is `https://glowaminos.github.io/`. Run `node scripts/build-seo.mjs` whenever `data/products.json` or the indexable page list changes. It updates static product descriptions and structured data, crawlable homepage and shop product links, canonical and Open Graph URLs, `robots.txt`, and `sitemap.xml`. Keep the generated HTML in the same commit as the catalog changes. See `docs/glow-aminos-seo-audit.md` for the research findings, limits and Search Console steps. Do not claim the separate `glowaminos.com` site, its reviews, or other business identifiers belong to this storefront without owner verification.

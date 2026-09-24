@@ -26,4 +26,3 @@ export function injectChrome(){
 }
 export function setupMenu(){const b=document.querySelector('[data-menu]'),m=document.querySelector('[data-mobile-menu]');if(b&&m)b.onclick=()=>{const open=m.classList.toggle('hidden')===false;b.setAttribute('aria-expanded',String(open));b.setAttribute('aria-label',open?'Close menu':'Open menu')}}
 export function setupAccordion(){document.querySelectorAll('.accordion-button').forEach(b=>{b.setAttribute('aria-expanded',String(b.closest('.accordion-item').classList.contains('open')));b.onclick=()=>{const item=b.closest('.accordion-item');item.classList.toggle('open');b.setAttribute('aria-expanded',String(item.classList.contains('open')))}})}
-export function injectCanonical(){if(!SITE_CONFIG.siteUrl)return;const l=document.createElement('link');l.rel='canonical';l.href=SITE_CONFIG.siteUrl.replace(/\/$/,'')+location.pathname;document.head.appendChild(l)}

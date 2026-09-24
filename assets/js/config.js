@@ -1,7 +1,7 @@
 export const SITE_CONFIG = Object.freeze({
   brandName: "Glow Aminos",
   legalName: "",
-  siteUrl: "",
+  siteUrl: "https://glowaminos.github.io",
   supportEmail: "",
   abuseEmail: "",
   billingDescriptor: "",
