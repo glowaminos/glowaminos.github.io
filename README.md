@@ -33,3 +33,7 @@ The static checkout collects contact and shipping details locally for review. It
 ## Deploy
 
 Upload the repository root to GitHub Pages or another static host. Configure a production URL before adding canonical URLs or populating `sitemap.xml`. The repo contains no build step. Review the site on real mobile and desktop browsers before publishing new claims or enabling checkout.
+
+## Product details
+
+Every item has an original overview and a compound-level specification summary in `data/products.json`; product pages show a COA availability state and links to the site's shipping and returns information. The source trail and items that require merchant confirmation are in `docs/product-content-sources.md`. Compound identity information is distinct from a Glow Aminos lot's measured purity or a verified formulation. Do not transfer another seller's certificates or commercial policies into this catalog.
