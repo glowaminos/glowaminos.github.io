@@ -2,6 +2,8 @@
 
 Static HTML, CSS and JavaScript research catalog. No build step or runtime dependencies. The homepage and shared storefront layout use `assets/css/atelier.css` and `assets/js/` modules; existing owner-supplied AVIF vial assets remain in `assets/images/products/`.
 
+The catalog also includes enhanced 1254 × 1254 WebP versions under `assets/images/products/hires/`. Product cards use responsive `srcset`, the homepage hero uses the larger files, and individual product pages use them for pointer hover and an accessible click-to-zoom gallery. Keep the original AVIF files and update both versions when replacing a product image.
+
 ## Run locally
 
 From the repository root:

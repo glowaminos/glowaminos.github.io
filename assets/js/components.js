@@ -11,7 +11,8 @@ export function priceHtml(p){
 }
 export function productImage(p,{lazy=true,detail=false}={}){
  if(!p.image)return `<div class="vial-fallback"><span>${p.name}</span><small>RESEARCH USE ONLY</small></div>`;
- return `<img class="product-image${detail?' detail-image':''}" src="${assetUrl(p.image)}" alt="${p.name} product vial" width="384" height="384" ${lazy?'loading="lazy"':'fetchpriority="high"'} decoding="async">`;
+ const large=assetUrl(`assets/images/products/hires/${p.slug}.webp`);
+ return `<img class="product-image${detail?' detail-image':''}" src="${detail?large:assetUrl(p.image)}" ${detail?'':`srcset="${assetUrl(p.image)} 384w, ${large} 1254w" sizes="(max-width: 700px) 76vw, (max-width: 980px) 45vw, 25vw"`} alt="${p.name} product vial" width="${detail?1254:384}" height="${detail?1254:384}" ${lazy?'loading="lazy"':'fetchpriority="high"'} decoding="async">`;
 }
 export function productCard(p){
  const href=`${prefix()}products/${p.slug}.html`;
