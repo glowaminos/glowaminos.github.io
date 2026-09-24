@@ -6,7 +6,7 @@ export const SITE_CONFIG = Object.freeze({
   abuseEmail: "",
   billingDescriptor: "",
   currency: "USD",
-  freeShippingThreshold: null,
+  flatShippingRate: 10,
   shippingCutoff: "",
   checkoutEndpoint: "",
   contactEndpoint: "",

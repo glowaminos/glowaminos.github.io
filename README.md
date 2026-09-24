@@ -26,7 +26,7 @@ Products with `startingPrice` can be added to the cart with an estimated subtota
 
 ## Merchant setup
 
-In `assets/js/config.js`, add the confirmed legal entity, site URL, support email, abuse email, billing descriptor, shipping threshold/cutoff, and real form endpoints. No shipping offers, lot claims, or testing badges are shown before supporting data exists. Publish approved shipping, returns, privacy and terms policies before accepting orders.
+In `assets/js/config.js`, add the confirmed legal entity, site URL, support email, abuse email, billing descriptor, shipping threshold/cutoff, and real form endpoints. A flat $10 shipping fee per non-empty order is set in `SITE_CONFIG.flatShippingRate` and included in the cart, checkout and server validation total. No free-shipping offers, lot claims, or testing badges are shown before supporting data exists. Publish approved shipping, returns, privacy and terms policies before accepting orders.
 
 The static checkout collects contact and shipping details locally for review. It never posts unless `checkoutEndpoint` is configured; payment must be hosted or handled securely server-side. `assets/js/payments.js` marks the integration boundary. Do not put payment credentials in client JavaScript. Existing `api/` functions only validate or reject requests; they do not process payment.
 
