@@ -1,4 +1,5 @@
 import {readFile} from 'node:fs/promises';
+import {SITE_CONFIG} from '../assets/js/config.js';
 export default async function handler(req,res){
  if(req.method!=='POST')return res.status(405).json({error:'Method not allowed'});
  const items=Array.isArray(req.body?.items)?req.body.items:[];
@@ -12,5 +13,5 @@ export default async function handler(req,res){
   if(!Number.isInteger(qty)||qty<1||qty>99)return res.status(400).json({error:'Invalid quantity.'});
   total+=(product.salePrice??product.regularPrice)*qty;
  }
- return res.status(503).json({error:'Secure payment provider is not configured yet.',validatedTotal:total});
+ return res.status(503).json({error:'Secure payment provider is not configured yet.',validatedTotal:total+SITE_CONFIG.flatShippingRate});
 }
