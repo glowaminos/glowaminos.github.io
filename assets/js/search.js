@@ -1,11 +1,11 @@
 import {PRODUCTS} from './products.js';
-import {money,getPrice,prefix} from './components.js';
+import {prefix,selectedBioLabsProductUrl} from './components.js';
 export function setupSearch(){
  const modal=document.querySelector('[data-search-modal]');if(!modal)return;
  const input=modal.querySelector('[data-global-search]'),results=modal.querySelector('[data-search-results]');let previous,selected=0;
  const score=(name,term)=>{name=name.toLowerCase();if(name.includes(term))return 2;let position=0;for(const letter of term){position=name.indexOf(letter,position);if(position===-1)return 0;position++}return 1};
  const highlight=()=>[...results.querySelectorAll('.search-result')].forEach((a,i)=>a.classList.toggle('selected',i===selected));
- const render=()=>{const term=input.value.trim().toLowerCase(),matches=term?PRODUCTS.map(p=>({p,score:score(p.name+' '+p.type,term)})).filter(x=>x.score).sort((a,b)=>b.score-a.score).slice(0,8).map(x=>x.p):PRODUCTS.filter(p=>p.featured).slice(0,4);results.innerHTML=matches.length?matches.map(p=>`<a class="search-result" href="${prefix()}products/${p.slug}.html"><img src="${prefix()}${p.image}" alt="" width="48" height="48"><span>${p.name}<small>${p.category}</small></span><strong>${getPrice(p)==null?'Enquire':money(getPrice(p))}</strong></a>`).join(''):'<p class="search-empty">No matching products.</p>';selected=0;highlight()};
+ const render=()=>{const term=input.value.trim().toLowerCase(),matches=term?PRODUCTS.map(p=>({p,score:score(p.name+' '+p.type,term)})).filter(x=>x.score).sort((a,b)=>b.score-a.score).slice(0,8).map(x=>x.p):PRODUCTS.filter(p=>p.featured).slice(0,4);results.innerHTML=matches.length?matches.map(p=>`<a class="search-result" href="${selectedBioLabsProductUrl(p)}"><img src="${prefix()}${p.image}" alt="" width="48" height="48"><span>${p.name}<small>${p.category}</small></span><strong>View product</strong></a>`).join(''):'<p class="search-empty">No matching products.</p>';selected=0;highlight()};
  const open=()=>{if(document.querySelector('.age-gate'))return;previous=document.activeElement;modal.classList.remove('hidden');document.body.classList.add('locked');input.value='';render();input.focus()};
  const close=()=>{modal.classList.add('hidden');document.body.classList.remove('locked');previous?.focus?.()};
  document.querySelector('[data-search-open]')?.addEventListener('click',open);modal.querySelector('[data-search-close]').onclick=close;modal.addEventListener('click',e=>{if(e.target===modal)close()});input.addEventListener('input',render);

@@ -30,7 +30,8 @@
     "compoundClass": "Laboratory water supply",
     "overview": "BAC Water is listed as a laboratory supply alongside the research compound catalog. Confirm the container volume, full ingredients, and preservative concentration on the supplied label before ordering.",
     "researchContext": "The catalog does not identify a manufacturer or publish a formulation for this item. A similarly named product from another seller may have a different composition.",
-    "specificationNote": "Container volume, composition, preservative concentration, sterility status, and storage conditions await Glow Aminos documentation."
+    "specificationNote": "Container volume, composition, preservative concentration, sterility status, and storage conditions await Glow Aminos documentation.",
+    "selectedBioLabsUrl": "https://selectedbiolabs.com/product/bac-water/"
   },
   {
     "id": "bpc-157",
@@ -63,7 +64,8 @@
     "compoundClass": "Synthetic 15-amino-acid peptide",
     "overview": "BPC-157 is a synthetic peptide with a 15-amino-acid sequence. It is studied in preclinical laboratory models involving cellular responses and tissue biology.",
     "researchContext": "This is research background about the named compound, not evidence of an effect from the vial sold here. Published human evidence remains limited.",
-    "specificationNote": "Catalog strength, formulation, lot purity, and storage instructions are not verified. Molecular identifiers above describe the named compound, not this product’s test result."
+    "specificationNote": "Catalog strength, formulation, lot purity, and storage instructions are not verified. Molecular identifiers above describe the named compound, not this product’s test result.",
+    "selectedBioLabsUrl": "https://selectedbiolabs.com/product/bpc-157/"
   },
   {
     "id": "bpc-157-tb-500-10mg",
@@ -97,7 +99,8 @@
     "listedStrength": "10 mg (catalog name; component amounts unconfirmed)",
     "overview": "This catalog entry names a 10 mg blend of BPC-157 and TB-500 for laboratory research involving two distinct peptides.",
     "researchContext": "The name does not establish how much of each peptide is in the vial. The relative amounts and the precise TB-500 sequence must be checked against Glow Aminos lot documentation.",
-    "specificationNote": "The 10 mg strength comes from the catalog name. Individual component amounts, exact TB-500 identity, formulation, purity, and storage are awaiting confirmation."
+    "specificationNote": "The 10 mg strength comes from the catalog name. Individual component amounts, exact TB-500 identity, formulation, purity, and storage are awaiting confirmation.",
+    "selectedBioLabsUrl": "https://selectedbiolabs.com/?s=BPC-157%20%2B%20TB-500%20-%2010MG&post_type=product"
   },
   {
     "id": "cjc-1295-no-dac-ipamorelin-10mg",
@@ -131,7 +134,8 @@
     "listedStrength": "10 mg (catalog name; component amounts unconfirmed)",
     "overview": "This research blend is named for CJC-1295 without DAC and ipamorelin. They are distinct peptide compounds studied in laboratory models of growth-hormone signaling.",
     "researchContext": "“No DAC” distinguishes the named CJC-1295 form from a DAC-linked form. The mixture ratio, precise identity, and amount of each ingredient are not documented in this catalog.",
-    "specificationNote": "The 10 mg strength comes from the catalog name. Component ratios, exact peptide identities, formulation, purity, and storage require supplier documentation."
+    "specificationNote": "The 10 mg strength comes from the catalog name. Component ratios, exact peptide identities, formulation, purity, and storage require supplier documentation.",
+    "selectedBioLabsUrl": "https://selectedbiolabs.com/product/cjc-ipamorelin/"
   },
   {
     "id": "ghk-cu",
@@ -164,7 +168,8 @@
     "compoundClass": "Copper-binding tripeptide complex",
     "overview": "GHK-Cu is a complex of the tripeptide glycyl-histidyl-lysine with copper. Laboratory literature examines this compound in cell and extracellular-matrix research.",
     "researchContext": "The chemical identity of GHK-Cu does not establish the concentration, copper content, or purity of a particular Glow Aminos vial.",
-    "specificationNote": "Catalog strength, formulation, lot purity, and storage instructions are not verified. Molecular identifiers above describe the named compound, not this product’s test result."
+    "specificationNote": "Catalog strength, formulation, lot purity, and storage instructions are not verified. Molecular identifiers above describe the named compound, not this product’s test result.",
+    "selectedBioLabsUrl": "https://selectedbiolabs.com/product/ghk-cu/"
   },
   {
     "id": "glow",
@@ -197,7 +202,8 @@
     "compoundClass": "Named multi-peptide blend",
     "overview": "GLOW is listed as a research blend. Compounds sold under this name elsewhere may combine BPC-157, TB-500, and GHK-Cu, but the Glow Aminos formula has not been documented.",
     "researchContext": "Do not infer this vial’s ingredients or proportions from another brand’s blend with the same name. Request the Glow Aminos formula and lot certificate for the actual product.",
-    "specificationNote": "Glow Aminos has not confirmed constituent peptides, amounts, total strength, formulation, purity, or storage for this blend."
+    "specificationNote": "Glow Aminos has not confirmed constituent peptides, amounts, total strength, formulation, purity, or storage for this blend.",
+    "selectedBioLabsUrl": "https://selectedbiolabs.com/product/glow-blend/"
   },
   {
     "id": "klow",
@@ -230,7 +236,8 @@
     "compoundClass": "Named multi-peptide blend",
     "overview": "KLOW is listed as a research blend. Other sellers use this name for blends that include BPC-157, TB-500, GHK-Cu, and KPV, but the ingredients of this Glow Aminos item remain unverified.",
     "researchContext": "A shared blend name does not establish the contents of this vial. Confirm the ingredient list, individual amounts, and lot results with Glow Aminos.",
-    "specificationNote": "Glow Aminos has not confirmed constituent peptides, amounts, total strength, formulation, purity, or storage for this blend."
+    "specificationNote": "Glow Aminos has not confirmed constituent peptides, amounts, total strength, formulation, purity, or storage for this blend.",
+    "selectedBioLabsUrl": "https://selectedbiolabs.com/product/klow-blend/"
   },
   {
     "id": "melanotan",
@@ -263,7 +270,8 @@
     "compoundClass": "Melanotan-family research peptide; subtype unspecified",
     "overview": "Melanotan is a name used for more than one synthetic peptide analog in laboratory research related to melanocortin signaling. This catalog entry does not specify which subtype is sold.",
     "researchContext": "Melanotan I and Melanotan II differ in sequence and chemical identity. A subtype-specific molecular formula or CAS number would be misleading until the exact product is confirmed.",
-    "specificationNote": "The subtype, sequence, CAS number, vial strength, formulation, purity, and storage require confirmation from Glow Aminos."
+    "specificationNote": "The subtype, sequence, CAS number, vial strength, formulation, purity, and storage require confirmation from Glow Aminos.",
+    "selectedBioLabsUrl": "https://selectedbiolabs.com/?s=MELANOTAN&post_type=product"
   },
   {
     "id": "mots-c",
@@ -296,7 +304,8 @@
     "compoundClass": "Mitochondrial-derived 16-amino-acid peptide",
     "overview": "MOTS-c is a 16-amino-acid mitochondrial-derived peptide studied in laboratory models of cellular metabolism and metabolic signaling.",
     "researchContext": "Its sequence identifies the research compound; it is not a purity test or confirmation that a particular vial contains this sequence.",
-    "specificationNote": "Catalog strength, formulation, lot purity, and storage instructions are not verified. Molecular identifiers above describe the named compound, not this product’s test result."
+    "specificationNote": "Catalog strength, formulation, lot purity, and storage instructions are not verified. Molecular identifiers above describe the named compound, not this product’s test result.",
+    "selectedBioLabsUrl": "https://selectedbiolabs.com/product/mots-c/"
   },
   {
     "id": "nad-plus",
@@ -329,7 +338,8 @@
     "compoundClass": "Dinucleotide coenzyme",
     "overview": "NAD+ (nicotinamide adenine dinucleotide) is a coenzyme used in cellular redox reactions. It is included here as a laboratory research compound rather than as a peptide.",
     "researchContext": "NAD+ participates in reactions involving multiple enzyme families. Its chemical identity alone says nothing about the concentration, purity, or formulation supplied by Glow Aminos.",
-    "specificationNote": "Catalog strength, formulation, lot purity, and storage instructions are not verified. Molecular identifiers above describe the named compound, not this product’s test result."
+    "specificationNote": "Catalog strength, formulation, lot purity, and storage instructions are not verified. Molecular identifiers above describe the named compound, not this product’s test result.",
+    "selectedBioLabsUrl": "https://selectedbiolabs.com/product/nad-plus/"
   },
   {
     "id": "retatrutide",
@@ -362,7 +372,8 @@
     "compoundClass": "Investigational receptor-agonist peptide",
     "overview": "Retatrutide is an investigational peptide studied for activity at GLP-1, GIP, and glucagon receptors in research settings.",
     "researchContext": "This catalog entry does not establish molecular identity, vial strength, clinical suitability, or approval status for any particular batch. Laboratory research use only.",
-    "specificationNote": "Molecular identity, vial strength, formulation, purity, and storage have not been verified against Glow Aminos documentation."
+    "specificationNote": "Molecular identity, vial strength, formulation, purity, and storage have not been verified against Glow Aminos documentation.",
+    "selectedBioLabsUrl": "https://selectedbiolabs.com/?s=RETATRUTIDE&post_type=product"
   },
   {
     "id": "tb-500",
@@ -395,7 +406,8 @@
     "compoundClass": "Thymosin beta-4-related research peptide",
     "overview": "TB-500 is a research name associated with thymosin beta-4-related peptides. The term is used for different peptide forms in supplier catalogs.",
     "researchContext": "The exact sequence and molecular weight depend on which form is supplied. Confirm the particular peptide identity on a Glow Aminos lot certificate before drawing comparisons with other suppliers.",
-    "specificationNote": "Exact sequence, CAS number, vial strength, formulation, purity, and storage require confirmation."
+    "specificationNote": "Exact sequence, CAS number, vial strength, formulation, purity, and storage require confirmation.",
+    "selectedBioLabsUrl": "https://selectedbiolabs.com/product/tb-500/"
   },
   {
     "id": "tesamorelin",
@@ -428,6 +440,7 @@
     "compoundClass": "Growth-hormone-releasing-hormone analog",
     "overview": "Tesamorelin is a synthetic analog of growth-hormone-releasing hormone. This entry is for the named compound as a laboratory research material.",
     "researchContext": "Published information about the compound does not verify the potency, purity, or handling requirements of a Glow Aminos lot.",
-    "specificationNote": "Catalog strength, formulation, lot purity, and storage instructions are not verified. Molecular identifiers above describe the named compound, not this product’s test result."
+    "specificationNote": "Catalog strength, formulation, lot purity, and storage instructions are not verified. Molecular identifiers above describe the named compound, not this product’s test result.",
+    "selectedBioLabsUrl": "https://selectedbiolabs.com/product/tesamorelin/"
   }
 ]
