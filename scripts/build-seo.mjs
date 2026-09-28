@@ -1,4 +1,4 @@
-import {readFile,writeFile} from 'node:fs/promises';
+import {mkdir,readFile,writeFile} from 'node:fs/promises';
 import {join} from 'node:path';
 import {SITE_CONFIG} from '../assets/js/config.js';
 
@@ -23,6 +23,21 @@ function setJsonLd(html,graph){
  const tag=`<script type="application/ld+json" data-seo-structured>${structured(graph)}</script>`;
  return /<script type="application\/ld\+json" data-seo-structured>[^<]*<\/script>/.test(html)?html.replace(/<script type="application\/ld\+json" data-seo-structured>[^<]*<\/script>/,tag):html.replace('</head>',`${tag}</head>`);
 }
+const cleanHref=value=>{
+ const [path,hash='']=value.split('#');
+ const normalized=path.replace(/^(\.\.\/)+/, '').replace(/^\.\//,'');
+ if(normalized==='index.html')return `/${hash?`#${hash}`:''}`;
+ if(normalized.startsWith('products/')&&normalized.endsWith('.html'))return `/${normalized.slice(0,-5)}/${hash?`#${hash}`:''}`;
+ if(/^[a-z0-9-]+\.html$/i.test(normalized))return `/${normalized.slice(0,-5)}/${hash?`#${hash}`:''}`;
+ return value;
+};
+const cleanInternalLinks=html=>html.replace(/(<a\b[^>]*\bhref=")([^"]+\.html(?:#[^"]*)?)(")/g,(_,start,href,end)=>`${start}${cleanHref(href)}${end}`);
+function withRootBase(html){
+ const redirect='<script id="clean-url-redirect">if(location.pathname.endsWith(".html")){const path=location.pathname==="/index.html"?"/":location.pathname.replace(/\\.html$/,"/");history.replaceState(null,"",path+location.search+location.hash)}</script>';
+ if(!html.includes('<base '))html=html.replace('<head>','<head><base href="/">');
+ if(!html.includes('id="clean-url-redirect"'))html=html.replace('<head>','<head>'+redirect);
+ return html;
+}
 function fallbackProduct(p){
  const items=[['Catalog category',p.category],['Compound class',p.compoundClass],['Listed strength',p.listedStrength],['CAS number',p.casNumber],['Molecular formula',p.molecularFormula],['Molecular weight',p.molecularWeight],['Sequence',p.sequence]].filter(([,v])=>v!=null);
  const price=p.startingPrice!=null?`From ${money(p.startingPrice)}`:money(p.salePrice??p.regularPrice);
@@ -30,7 +45,7 @@ function fallbackProduct(p){
  return `<div class="container product-detail" data-product-detail><!-- SEO_PRODUCT_START --><div class="product-gallery"><div class="product-visual has-image product-detail-image"><img class="product-image detail-image" src="../assets/images/products/hires/${escape(p.slug)}.webp" alt="${escape(p.name)} product vial" width="1254" height="1254"></div></div><div class="product-info"><p class="kicker">${p.type==='blend'?'RESEARCH BLEND':p.type==='supply'?'LAB SUPPLY':'SINGLE PEPTIDE'} / PRODUCT</p><h1 class="title">${escape(p.name)}</h1><div class="product-info__price"><span class="price">${price}</span></div><a class="btn" href="${escape(destination)}">View product</a><p class="product-info__intro">${escape(p.overview)}</p><div class="product-use-notice">FOR LABORATORY RESEARCH USE ONLY. NOT FOR HUMAN OR VETERINARY USE.</div><div class="product-data"><details open><summary>Product overview</summary><p>${escape(p.overview)}</p>${p.researchContext?`<p>${escape(p.researchContext)}</p>`:''}</details><details><summary>Product specifications</summary><dl>${items.map(([key,value])=>`<div><dt>${escape(key)}</dt><dd>${escape(value)}</dd></div>`).join('')}</dl><p>${escape(p.specificationNote)}</p></details><details><summary>Certificate of analysis (COA)</summary><p>No Glow Aminos batch-specific COA has been provided for this product. Check the <a href="${selectedBioLabs}shop/">Selected BioLabs shop</a> for current product information.</p></details><details><summary>Shipping &amp; returns</summary><p>See the <a href="${selectedBioLabs}shop/">Selected BioLabs shop</a> for current information.</p></details></div></div><!-- SEO_PRODUCT_END --></div>`;
 }
 for(const p of products){
- const path=join('products',`${p.slug}.html`),url=`${base}products/${p.slug}.html`;
+ const path=join('products',`${p.slug}.html`),url=`${base}products/${p.slug}/`;
  await edit(path,html=>{
   const fallback=fallbackProduct(p);
   html=html.includes('<!-- SEO_PRODUCT_START -->')?html.replace(/<div class="container product-detail" data-product-detail><!-- SEO_PRODUCT_START -->[\s\S]*?<!-- SEO_PRODUCT_END --><\/div>/,fallback):html.replace('<div class="container product-detail" data-product-detail></div>',fallback);
@@ -40,8 +55,9 @@ for(const p of products){
   const product={'@type':'Product','@id':`${url}#product`,name:p.name,description:p.overview,url,image:`${base}assets/images/products/hires/${p.slug}.webp`};
   const price=p.salePrice??p.regularPrice;
   if(p.startingPrice==null&&price!=null)product.offers={'@type':'Offer',url,priceCurrency:'USD',price};
-  const breadcrumb={'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Glow Aminos',item:base},{'@type':'ListItem',position:2,name:'Research catalog',item:`${base}shop.html`},{'@type':'ListItem',position:3,name:p.name,item:url}]};
-  return setJsonLd(html,{'@context':'https://schema.org','@graph':[product,breadcrumb]});
+  const breadcrumb={'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Glow Aminos',item:base},{'@type':'ListItem',position:2,name:'Research catalog',item:`${base}shop/`},{'@type':'ListItem',position:3,name:p.name,item:url}]};
+  html=setJsonLd(html,{'@context':'https://schema.org','@graph':[product,breadcrumb]});
+  return withRootBase(cleanInternalLinks(html));
  });
 }
 const card=p=>{const href=p.selectedBioLabsUrl||`${selectedBioLabs}shop/`;return `<article class="product-card"><a class="product-visual has-image" href="${escape(href)}"><img class="product-image" src="${escape(p.image)}" alt="${escape(p.name)} product vial" width="384" height="384" loading="lazy"></a><div class="product-body"><a class="product-name" href="${escape(href)}">${escape(p.name)}</a><div class="product-card__bottom"><span class="price">${p.startingPrice!=null?'From ':''}${money(p.salePrice??p.startingPrice??p.regularPrice)}</span><span class="product-card__note">Research use only</span></div><div class="card-actions"><a class="btn" href="${escape(href)}">View product</a></div></div></article>`};
@@ -51,17 +67,26 @@ for(const [file,attribute,items] of [['index.html','data-featured-products',prod
   const re=new RegExp(`<div class="product-grid" ${attribute}><!-- SEO_GRID_START -->[\\s\\S]*?<!-- SEO_GRID_END --><\\/div>`);
   html=re.test(html)?html.replace(re,block):html.replace(`<div class="product-grid" ${attribute}></div>`,block);
   if(!html.includes(`<!-- SEO_GRID_START -->`))throw Error(`Missing catalog fallback: ${file}`);
-  html=setCanonical(html,file==='index.html'?base:`${base}${file}`);
+  html=setCanonical(html,file==='index.html'?base:`${base}${file.replace(/\.html$/,'/')}`);
   if(file==='index.html'){
    html=setSocialImage(html,`${base}assets/images/glow-aminos-logo.webp`,'Glow Aminos logo');
    html=setJsonLd(html,{'@context':'https://schema.org','@graph':[{'@type':'Organization','@id':`${base}#organization`,name:'Glow Aminos',url:base,logo:`${base}assets/images/glow-aminos-logo.webp`},{'@type':'WebSite','@id':`${base}#website`,name:'Glow Aminos',url:base,publisher:{'@id':`${base}#organization`}}]});
   }
-  return html;
+  return withRootBase(cleanInternalLinks(html));
  });
 }
 const pages=['about.html','contact.html','faq.html','quality.html','coa.html','shipping.html','returns.html','disclaimer.html','research-use-only.html','privacy.html','terms.html'];
-for(const file of pages)await edit(file,html=>setCanonical(html,`${base}${file}`));
-const urls=['','shop.html',...pages,...products.map(p=>`products/${p.slug}.html`)];
+for(const file of pages)await edit(file,html=>withRootBase(cleanInternalLinks(setCanonical(html,`${base}${file.replace(/\.html$/,'/')}`))));
+const aliases=['shop.html','cart.html','checkout.html',...pages,...products.map(p=>`products/${p.slug}.html`)];
+for(const file of aliases){
+ const route=file.replace(/\.html$/,'');
+ const aliasPath=join(route,'index.html');
+ await mkdir(route,{recursive:true});
+ const aliasHtml=withRootBase(cleanInternalLinks(await readFile(file,'utf8')));
+ await edit(file,()=>aliasHtml);
+ await writeFile(aliasPath,aliasHtml);
+}
+const urls=['','shop/',...pages.map(file=>`${file.replace(/\.html$/,'')}/`),...products.map(p=>`products/${p.slug}/`)];
 await writeFile('sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(url=>`  <url><loc>${base}${url}</loc></url>`).join('\n')}\n</urlset>\n`);
 await writeFile('robots.txt',`User-agent: *\nAllow: /\n\nSitemap: ${base}sitemap.xml\n`);
 console.log(`Generated ${products.length} crawlable product pages and ${urls.length} sitemap URLs.`);
